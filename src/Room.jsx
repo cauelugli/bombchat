@@ -27,6 +27,7 @@ const Room = () => {
   useEffect(() => {
     socketRef.current = io("http://192.168.15.12:8080");
 
+    
     socketRef.current.on("a", (data) => {
       console.log("Received welcome message:", data);
     });
